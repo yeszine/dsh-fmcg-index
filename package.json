@@ -12,7 +12,8 @@
     "check": "node scripts/build.mjs --check",
     "validate": "node scripts/validate.mjs index.json",
     "add": "node scripts/add.mjs",
-    "update": "node scripts/update.mjs"
+    "update": "node scripts/update.mjs",
+    "screen": "node scripts/screen.mjs"
   },
   "dependencies": {
     "@deepseek-ai/dsh-plugin-market-index": "0.2.1-rc.2"
