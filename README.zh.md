@@ -1,4 +1,4 @@
-# 快消经销商办公插件市场（DSH 索引源）
+# 快消插件市场（DSH 索引源）
 
 一个面向**快消品经销商**的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 插件市场索引源：
 订单开单、库存临期、门店拜访、促销费用、回款对账、报表、单据 OCR、协同审批、ERP 对接，

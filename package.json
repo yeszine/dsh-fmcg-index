@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "FMCG distributor office plugin market index for DeepSeek Harness (market index format 1)",
+  "description": "FMCG plugin market index for DeepSeek Harness (market index format 1)",
   "engines": {
     "node": "^22.19 || >=24"
   },

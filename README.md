@@ -1,4 +1,4 @@
-# FMCG Distributor Office Plugin Market (DSH index)
+# FMCG Plugin Market (DSH index)
 
 A public DeepSeek Harness plugin-market index (format 1) for FMCG distributors:
 orders, inventory, store visits, promotions, receivables, reporting, documents,
