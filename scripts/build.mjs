@@ -27,7 +27,7 @@ const indexUrl =
 
 async function readJson(relative) {
   const file = path.join(root, relative);
-  const text = await readFile(file, 'utf8');
+  const text = (await readFile(file, 'utf8')).replace(/^\uFEFF/u, '');
   try {
     return JSON.parse(text);
   } catch (error) {

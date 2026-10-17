@@ -31,7 +31,9 @@ const labels = String(option('--labels', ''))
   .filter(Boolean);
 const priority = Number(option('--priority', '50'));
 
-const market = JSON.parse(await readFile(path.join(root, 'data/market.json'), 'utf8'));
+const market = JSON.parse(
+  (await readFile(path.join(root, 'data/market.json'), 'utf8')).replace(/^\uFEFF/u, ''),
+);
 if (!Object.hasOwn(market.metadata.categories, category)) {
   console.error(`[error] 分类 ${category} 未在 data/market.json 中声明`);
   process.exit(1);

@@ -39,7 +39,7 @@ if (/^https?:\/\//u.test(input)) {
 
 let index;
 try {
-  index = JSON.parse(text);
+  index = JSON.parse(text.replace(/^\uFEFF/u, ''));
 } catch (error) {
   console.error(`[error] 不是合法 JSON：${error.message}`);
   process.exit(1);

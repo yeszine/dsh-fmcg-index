@@ -127,6 +127,59 @@ Git 来源必须钉死到 **40 位小写 commit**，不要用分支或 tarball�
 
 改完 `data/plugins.json` 后执行 `npm run build`，提交，Actions 会自动重建并部署。
 
+## 日常维护
+
+维护就是「改清单 → 本地构建校验 → push」，发布交给 GitHub Actions。
+
+### 1. 检查并应用版本更新
+
+```sh
+node scripts/update.mjs          # 只出报告
+node scripts/update.mjs --write  # 写回 data/plugins.json
+```
+
+- **npm 来源**：自动查 registry 的 `dist-tags.latest`，更新 `version`、`publishTimestamp`、`engines.dsh`，
+  并保留最近 3 个版本（用户可在详情页选旧版本回滚）。
+- **Git 来源**：显示 `manual`，需要你看上游 release 后把 `commit` 换成新的 40 位 SHA。
+- 新版本没有声明 `dsh.bundle` 时会标 `skip`，不会写回。
+
+应用后照常构建并推送：
+
+```sh
+node scripts/build.mjs
+git add -A
+git commit -m "data: update plugin versions"
+git push
+```
+
+### 2. 新增插件
+
+用 `scripts/add.mjs` 生成条目（见上一节），粘进 `data/plugins.json`，构建后 push。
+
+### 3. 下架插件
+
+从 `data/plugins.json` 删掉该对象，构建后 push。注意：**下架只影响「发现」列表**，
+已经装过的用户不会被自动卸载；如果只是想让用户升级，应该用新版本顶替而不是删除。
+
+### 4. 修改分类 / 标签
+
+先改 `data/market.json` 里的声明，再改条目的 `metadata`。条目引用未声明的 id 会导致整份索引校验失败。
+
+### 5. 审核清单（每次收录前）
+
+- `package.json` 真的声明了 `dsh.bundle.patch`；
+- 版本是精确 SemVer，Git 来源钉死 40 位 commit；
+- `engines.dsh` 已确认（或确认 peer 推导结果）；
+- 能力/风险标签如实：`fs-write`、`shell`、`credentials`、`erp-write` 等不能漏；
+- 第三方包至少看过仓库和权限说明；内部包标 `internal-only`。
+
+### 6. 可选：定时检查
+
+把 `node scripts/update.mjs --write` 加进自己的计划任务或 CI，每天跑一次；
+有变更时提交并 push，Actions 会自动重建、校验并发布。
+
+> 发布后 Pages 缓存约 10 分钟，DSH 自身还有 10 分钟索引缓存；在「发现」页刷新即可。
+
 ## 四类内容的打包方式
 
 索引里的条目本质都是 plugin（bundle），技能/专家/MCP 只是打包方式不同：
