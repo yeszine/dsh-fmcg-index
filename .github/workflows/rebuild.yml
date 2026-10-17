@@ -1,0 +1,68 @@
+name: Build and deploy market index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'site/**'
+      - 'package.json'
+      - '.github/workflows/**'
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build and validate index
+        run: npm run build
+
+      - name: Validate generated index
+        run: npm run validate
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p site
+          cp index.json site/index.json
+          touch site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+        with:
+          # Enable GitHub Pages (Actions source) on the first run so the repo
+          # works without a manual Settings -> Pages click.
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
