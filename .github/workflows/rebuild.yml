@@ -48,10 +48,6 @@ jobs:
           touch site/.nojekyll
 
       - uses: actions/configure-pages@v5
-        with:
-          # Enable GitHub Pages (Actions source) on the first run so the repo
-          # works without a manual Settings -> Pages click.
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
