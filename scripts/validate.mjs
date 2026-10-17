@@ -49,7 +49,7 @@ try {
 // so it needs an absolute URL even when we validate a local file.
 const indexUrl = /^https?:\/\//u.test(input)
   ? input
-  : 'https://example.github.io/fmcg-dsh-index/index.json';
+  : 'https://example.github.io/dsh-fmcg-index/index.json';
 
 try {
   const stats = validateMarketIndex(index, indexUrl);

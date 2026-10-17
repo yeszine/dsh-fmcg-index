@@ -19,9 +19,9 @@ npm run check      # validate only
 
 This repository is already deployed:
 
-- Repository: <https://github.com/yeszine/fmcg-dsh-index>
-- Index: <https://yeszine.github.io/fmcg-dsh-index/index.json>
-- Landing page: <https://yeszine.github.io/fmcg-dsh-index/>
+- Repository: <https://github.com/yeszine/dsh-fmcg-index>
+- Index: <https://yeszine.github.io/dsh-fmcg-index/index.json>
+- Landing page: <https://yeszine.github.io/dsh-fmcg-index/>
 
 Push to `main` and GitHub Actions rebuilds, validates and deploys automatically.
 

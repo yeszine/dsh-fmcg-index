@@ -22,7 +22,7 @@ const outputPath = path.resolve(root, outFlag === -1 ? 'index.json' : args[outFl
 const indexUrlFlag = args.indexOf('--index-url');
 const indexUrl =
   indexUrlFlag === -1
-    ? 'https://example.github.io/fmcg-dsh-index/index.json'
+    ? 'https://example.github.io/dsh-fmcg-index/index.json'
     : args[indexUrlFlag + 1];
 
 async function readJson(relative) {

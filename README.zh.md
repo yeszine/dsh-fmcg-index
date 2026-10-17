@@ -41,9 +41,9 @@ npm run validate     # 校验已生成的 index.json
 
 仓库已经创建并部署上线：
 
-- 仓库：<https://github.com/yeszine/fmcg-dsh-index>
-- 索引：<https://yeszine.github.io/fmcg-dsh-index/index.json>
-- 落地页：<https://yeszine.github.io/fmcg-dsh-index/>
+- 仓库：<https://github.com/yeszine/dsh-fmcg-index>
+- 索引：<https://yeszine.github.io/dsh-fmcg-index/index.json>
+- 落地页：<https://yeszine.github.io/dsh-fmcg-index/>
 
 日常更新只需：
 
@@ -57,8 +57,8 @@ push 后 GitHub Actions 会自动构建、用官方校验器校验并发布，�
 
 如果你要把它复制到自己的账号下重建：
 
-1. 新建一个**公开**仓库，例如 `fmcg-dsh-index`；
-2. `git remote add origin https://github.com/<你的用户名>/fmcg-dsh-index.git && git push -u origin main`；
+1. 新建一个**公开**仓库，例如 `dsh-fmcg-index`；
+2. `git remote add origin https://github.com/<你的用户名>/dsh-fmcg-index.git && git push -u origin main`；
 3. **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**；
 4. 打开 **Actions** 里的 `Build and deploy market index`，点 **Run workflow**。
 
@@ -68,7 +68,7 @@ push 后 GitHub Actions 会自动构建、用官方校验器校验并发布，�
 ## 在 DSH 里添加
 
 1. 打开 **插件 → 发现**。
-2. 点 **添加索引源**，粘贴 <https://yeszine.github.io/fmcg-dsh-index/index.json>。
+2. 点 **添加索引源**，粘贴 <https://yeszine.github.io/dsh-fmcg-index/index.json>。
 3. 之后就能搜索、按分类/标签筛选、按「推荐度 / 最近更新」排序，并一键安装。
 
 > 国内网络提示：DSH 宿主进程读索引**不走 Windows 系统代理**（只认 `http_proxy` / `https_proxy` 环境变量或
