@@ -17,11 +17,16 @@ npm run check      # validate only
 
 ## Publish
 
-Push to GitHub, then set **Settings → Pages → Source** to **GitHub Actions**.
-The index becomes available at:
+This repository is already deployed:
 
-```
-https://<owner>.github.io/<repo>/index.json
-```
+- Repository: <https://github.com/yeszine/fmcg-dsh-index>
+- Index: <https://yeszine.github.io/fmcg-dsh-index/index.json>
+- Landing page: <https://yeszine.github.io/fmcg-dsh-index/>
 
-Add that URL in DSH under **Plugins → Discover → Add index source**.
+Push to `main` and GitHub Actions rebuilds, validates and deploys automatically.
+
+To rebuild it under another account: push to a public repo, then set
+**Settings → Pages → Source** to **GitHub Actions** and run the workflow once.
+(`GITHUB_TOKEN` cannot create the Pages site, so enable it manually first.)
+
+Add the index URL in DSH under **Plugins → Discover → Add index source**.

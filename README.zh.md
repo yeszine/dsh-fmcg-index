@@ -39,37 +39,36 @@ npm run validate     # 校验已生成的 index.json
 
 ## 发布到 GitHub Pages（公开）
 
-1. 在 GitHub 新建一个**公开**仓库，例如 `fmcg-dsh-index`，不要初始化 README。
-2. 本目录已经初始化并提交过，添加远端并推送即可：
+仓库已经创建并部署上线：
 
-   ```sh
-   git remote add origin https://github.com/<你的用户名>/fmcg-dsh-index.git
-   git push -u origin main
-   ```
+- 仓库：<https://github.com/yeszine/fmcg-dsh-index>
+- 索引：<https://yeszine.github.io/fmcg-dsh-index/index.json>
+- 落地页：<https://yeszine.github.io/fmcg-dsh-index/>
 
-   如果你是从零重建（或想换成自己的提交信息），用：
+日常更新只需：
 
-   ```sh
-   git init -b main
-   git add .
-   git commit -m "feat: initial FMCG distributor plugin market index"
-   ```
+```sh
+git add .
+git commit -m "data: add <plugin>"
+git push origin main
+```
 
-3. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
-4. 打开 **Actions** 里的 `Build and deploy market index`，点 **Run workflow**（或直接等下一次 push）。
-5. 部署完成后，索引地址是：
+push 后 GitHub Actions 会自动构建、用官方校验器校验并发布，约 1 分钟生效。
 
-   ```
-   https://<你的用户名>.github.io/fmcg-dsh-index/index.json
-   ```
+如果你要把它复制到自己的账号下重建：
 
-   `site/` 会被发布为该地址的站点根目录，落地页在
-   `https://<你的用户名>.github.io/fmcg-dsh-index/`。
+1. 新建一个**公开**仓库，例如 `fmcg-dsh-index`；
+2. `git remote add origin https://github.com/<你的用户名>/fmcg-dsh-index.git && git push -u origin main`；
+3. **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**；
+4. 打开 **Actions** 里的 `Build and deploy market index`，点 **Run workflow**。
+
+> 注意：工作流里的 `actions/configure-pages` 没有开 `enablement: true`——
+> GitHub 默认的 `GITHUB_TOKEN` 没有创建 Pages 站点的权限，首次必须在 Settings 里手动启用一次。
 
 ## 在 DSH 里添加
 
 1. 打开 **插件 → 发现**。
-2. 点 **添加索引源**，粘贴上面的 `index.json` 地址。
+2. 点 **添加索引源**，粘贴 <https://yeszine.github.io/fmcg-dsh-index/index.json>。
 3. 之后就能搜索、按分类/标签筛选、按「推荐度 / 最近更新」排序，并一键安装。
 
 > 国内网络提示：DSH 宿主进程读索引**不走 Windows 系统代理**（只认 `http_proxy` / `https_proxy` 环境变量或
