@@ -15,8 +15,16 @@
     },
     "metadata": {
       "category": "tools",
-      "labels": ["network", "llm"],
-      "keywords": ["plugin", "discovery", "search", "trust"],
+      "labels": [
+        "network",
+        "llm"
+      ],
+      "keywords": [
+        "plugin",
+        "discovery",
+        "search",
+        "trust"
+      ],
       "sortKeys": {
         "priority": 30,
         "updated": 1792069214
@@ -51,8 +59,15 @@
     },
     "metadata": {
       "category": "collaboration",
-      "labels": ["llm", "network"],
-      "keywords": ["chat", "side panel", "quick question"],
+      "labels": [
+        "llm",
+        "network"
+      ],
+      "keywords": [
+        "chat",
+        "side panel",
+        "quick question"
+      ],
       "sortKeys": {
         "priority": 20,
         "updated": 1789281287
@@ -64,6 +79,367 @@
         "publishTimestamp": 1789281287,
         "source": {
           "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-netcafe",
+    "title": {
+      "en": "Invoice & Ledger Reconciliation",
+      "zh": "发票对账工具"
+    },
+    "description": {
+      "en": "Hosted MCP tools: invoice and bank-statement extraction with in-code arithmetic checks and integer-cent reconciliation, plus PDF/table conversion and SQL dialect translation.",
+      "zh": "托管 MCP 工具：发票与银行流水提取，代码内算术校验、按整数分对账，附 PDF 与表格转换、SQL 方言转写。"
+    },
+    "homepage": "https://github.com/mario03690/dsh-netcafe",
+    "repository": {
+      "url": "https://github.com/mario03690/dsh-netcafe"
+    },
+    "metadata": {
+      "category": "receivables",
+      "labels": [
+        "network",
+        "shell"
+      ],
+      "keywords": [
+        "invoice",
+        "reconciliation",
+        "bank statement",
+        "pdf",
+        "对账",
+        "发票",
+        "流水"
+      ],
+      "sortKeys": {
+        "priority": 70,
+        "updated": 1787368563
+      }
+    },
+    "versions": [
+      {
+        "version": "0.3.1",
+        "publishTimestamp": 1787368563,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-invoice-tools",
+    "title": {
+      "en": "VAT Invoice Parser",
+      "zh": "电子发票解析报销"
+    },
+    "description": {
+      "en": "Parse Chinese VAT e-invoice PDFs into structured JSON with amount cross-checks, and aggregate multiple invoices into expense reports (Markdown/xlsx).",
+      "zh": "解析增值税电子发票 PDF（XML 附件优先、文本层兜底）为结构化 JSON，金额勾稽校验，多张汇总生成报销单（Markdown/xlsx）。"
+    },
+    "homepage": "https://github.com/988hj7tczd-oss/dsh-invoice-tools",
+    "repository": {
+      "url": "https://github.com/988hj7tczd-oss/dsh-invoice-tools"
+    },
+    "metadata": {
+      "category": "documents",
+      "labels": [
+        "fs-read",
+        "fs-write",
+        "shell"
+      ],
+      "keywords": [
+        "invoice",
+        "vat",
+        "fapiao",
+        "发票",
+        "报销"
+      ],
+      "sortKeys": {
+        "priority": 75,
+        "updated": 1787577924
+      }
+    },
+    "versions": [
+      {
+        "version": "0.1.1",
+        "publishTimestamp": 1787577924,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-office-tools",
+    "title": {
+      "en": "Office Document Tools",
+      "zh": "Office 文档工具"
+    },
+    "description": {
+      "en": "Workspace-safe Office tools: create/read Word, create/read/update Excel, create/read PowerPoint, with image layout support.",
+      "zh": "工作区安全的 Office 工具集：创建/读取 Word、创建/读取/更新 Excel、创建/读取 PowerPoint，支持图片排版。"
+    },
+    "homepage": "https://github.com/kw78/dsh-office-tools",
+    "repository": {
+      "url": "https://github.com/kw78/dsh-office-tools"
+    },
+    "metadata": {
+      "category": "documents",
+      "labels": [
+        "fs-read",
+        "fs-write",
+        "shell"
+      ],
+      "keywords": [
+        "excel",
+        "word",
+        "powerpoint",
+        "office",
+        "表格",
+        "报表"
+      ],
+      "sortKeys": {
+        "priority": 80,
+        "updated": 1791875546
+      }
+    },
+    "versions": [
+      {
+        "version": "1.0.6",
+        "publishTimestamp": 1791875546,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "@eqman00003/dsh-office-com",
+    "title": {
+      "en": "Office COM Automation",
+      "zh": "Office COM 操控"
+    },
+    "description": {
+      "en": "Drive live Excel/Word via COM: VBA macros, pivot tables, live recalculation, deep formatting, with accounting scenarios (double-entry, balance checks, SUMIF ledgers).",
+      "zh": "COM 驱动运行中的 Excel/Word：VBA 宏、透视表、活公式重算、深度排版，含会计场景（复式记账、借贷平衡、SUMIF 科目总账）。"
+    },
+    "homepage": "https://github.com/wly8691-jpg/dsh-office-com",
+    "repository": {
+      "url": "https://github.com/wly8691-jpg/dsh-office-com"
+    },
+    "metadata": {
+      "category": "documents",
+      "labels": [
+        "fs-read",
+        "fs-write",
+        "shell",
+        "dynamic-code"
+      ],
+      "keywords": [
+        "excel",
+        "word",
+        "vba",
+        "pivot",
+        "com",
+        "会计",
+        "记账"
+      ],
+      "sortKeys": {
+        "priority": 65,
+        "updated": 1791324150
+      }
+    },
+    "versions": [
+      {
+        "version": "1.2.1",
+        "publishTimestamp": 1791324150,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-data-cleaning-agent",
+    "title": {
+      "en": "Data Cleaning Agent",
+      "zh": "企业名单清洗补全"
+    },
+    "description": {
+      "en": "Clean, dedupe and enrich Excel/CSV/JSON enterprise lists with field completion via QCC MCP, and export results.",
+      "zh": "面向 Excel/CSV/JSON 企业名单：清洗、去重、字段补全与企业数据补全，支持企查查 MCP 与结果导出。"
+    },
+    "homepage": "https://github.com/duhu2000/dsh-data-cleaning-agent",
+    "repository": {
+      "url": "https://github.com/duhu2000/dsh-data-cleaning-agent"
+    },
+    "metadata": {
+      "category": "master-data",
+      "labels": [
+        "fs-read",
+        "fs-write",
+        "network",
+        "shell"
+      ],
+      "keywords": [
+        "excel",
+        "csv",
+        "cleaning",
+        "dedupe",
+        "enrichment",
+        "企查查",
+        "主数据",
+        "名单"
+      ],
+      "sortKeys": {
+        "priority": 70,
+        "updated": 1789695241
+      }
+    },
+    "versions": [
+      {
+        "version": "0.9.17",
+        "publishTimestamp": 1789695241,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "@xmanrui/dsh-im",
+    "title": {
+      "en": "IM Bot Gateway",
+      "zh": "IM 机器人接入"
+    },
+    "description": {
+      "en": "Connect IM bots via QR code or bot credentials across 9 channels: Feishu, WeChat, DingTalk, WeCom, QQ, Slack, Telegram, Discord, WhatsApp.",
+      "zh": "通过二维码或机器人凭据接入 9 种 IM 渠道（飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord、WhatsApp）。"
+    },
+    "homepage": "https://github.com/xmanrui/dsh-im",
+    "repository": {
+      "url": "https://github.com/xmanrui/dsh-im"
+    },
+    "metadata": {
+      "category": "collaboration",
+      "labels": [
+        "network",
+        "credentials",
+        "wecom"
+      ],
+      "keywords": [
+        "wecom",
+        "dingtalk",
+        "feishu",
+        "wechat",
+        "telegram",
+        "slack",
+        "企业微信",
+        "钉钉",
+        "机器人"
+      ],
+      "sortKeys": {
+        "priority": 75,
+        "updated": 1791888334
+      }
+    },
+    "versions": [
+      {
+        "version": "4.39.0",
+        "publishTimestamp": 1791888334,
+        "source": {
+          "type": "npm"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-plugin-qcc",
+    "title": {
+      "en": "QCC Enterprise Data",
+      "zh": "企查查企业数据"
+    },
+    "description": {
+      "en": "QCC enterprise data source: login, quick search, knowledge base, tool discovery and data fetch across 100+ dimensions (registration, shareholders, litigation, IP).",
+      "zh": "企查查企业数据源：扫码登录认证、企业快搜、知识库检索、工具发现、取数执行 5 个工具，覆盖工商、股东、司法、知识产权等 100+ 数据维度。"
+    },
+    "homepage": "https://github.com/Samge0/dsh-plugin-qcc",
+    "repository": {
+      "url": "https://github.com/Samge0/dsh-plugin-qcc"
+    },
+    "metadata": {
+      "category": "master-data",
+      "labels": [
+        "network",
+        "credentials",
+        "shell"
+      ],
+      "keywords": [
+        "qcc",
+        "企查查",
+        "enterprise",
+        "工商",
+        "股东",
+        "司法"
+      ],
+      "sortKeys": {
+        "priority": 65,
+        "updated": 1788385327
+      }
+    },
+    "versions": [
+      {
+        "version": "2.1.0",
+        "publishTimestamp": 1788385327,
+        "source": {
+          "type": "git",
+          "url": "https://github.com/Samge0/dsh-plugin-qcc.git",
+          "commit": "9add16b489ae26c21fdea45f8eb2d61e37951186"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dsh-qrcode",
+    "title": {
+      "en": "Barcode & QR Generator",
+      "zh": "条码二维码生成"
+    },
+    "description": {
+      "en": "Generate QR codes (SVG/PNG/ASCII) and barcodes (Code128/EAN-13) fully offline, with no network or shell access.",
+      "zh": "离线生成二维码（SVG/PNG/ASCII）与条码（Code128/EAN-13），无网络、无 shell。"
+    },
+    "homepage": "https://github.com/hellosky983/dsh-qrcode",
+    "repository": {
+      "url": "https://github.com/hellosky983/dsh-qrcode"
+    },
+    "metadata": {
+      "category": "tools",
+      "labels": [
+        "offline"
+      ],
+      "keywords": [
+        "barcode",
+        "ean",
+        "code128",
+        "qr",
+        "条码",
+        "二维码"
+      ],
+      "sortKeys": {
+        "priority": 50,
+        "updated": 1790725325
+      }
+    },
+    "versions": [
+      {
+        "version": "0.2.0",
+        "publishTimestamp": 1790725325,
+        "source": {
+          "type": "git",
+          "url": "https://github.com/hellosky983/dsh-qrcode.git",
+          "commit": "7f420549bb4dfdcc28bd334518e8d404f265bdb4"
         }
       }
     ]
