@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "name": "dsh-plugin-scout",
     "title": {
@@ -440,7 +440,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/business-ops-analysis"
         },
         "engines": {
@@ -488,7 +488,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/deep-research-assistant"
         },
         "engines": {
@@ -536,7 +536,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/html-report-presentation"
         },
         "engines": {
@@ -589,7 +589,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/office-plugin"
         },
         "engines": {
@@ -636,7 +636,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/prd-authoring"
         },
         "engines": {
@@ -683,7 +683,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/dynamic-ui"
         },
         "engines": {
@@ -732,7 +732,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/iga-pages"
         },
         "engines": {
@@ -780,7 +780,7 @@
         "source": {
           "type": "git",
           "url": "https://github.com/yeszine/dsh-fmcg-index.git",
-          "commit": "e717d7cfdcedafbbd90a16b47d8eb6330486b644",
+          "commit": "083d9234a1b8acb4099fd95d703735e2240ea110",
           "path": "bundles/schedule"
         },
         "engines": {
