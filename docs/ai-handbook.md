@@ -2,7 +2,7 @@
 
 > 本文档给接手本仓库的 AI agent 读。读完后你应该能独立完成：新增 npm / git bundle、在 bundles/ 子目录加技能包、版本更新、发布。
 >
-> 根仓库：`yeszine/dsh-fmcg-index`，本地路径 `d:\GitHub\dsh-fmcg-index`，HEAD `015f7b9`，发布索引 URL `https://yeszine.github.io/dsh-fmcg-index/index.json`。
+> 根仓库：`yeszine/dsh-fmcg-index`，本地路径 `d:\GitHub\dsh-fmcg-index`，HEAD `69787a1`，发布索引 URL `https://yeszine.github.io/dsh-fmcg-index/index.json`。
 
 ---
 
@@ -388,13 +388,14 @@ npm run update          # 自动查 npm registry 上的新版本
 | push 后 Pages 没更新 | Actions 可能失败 | 到 GitHub Actions 看 rebuild.yml 的日志 |
 | 改了 bundle 但没改 plugins.json 的 version/publishTimestamp | 客户端不感知版本变化 | 每次实质改动都 bump patch version |
 | 多个 bundle 共用同一个 HEAD SHA 没问题 | 是的，格式校验器不要求不同 | 但每次改动 bundle 代码 + 对应 plugins.json 时，要更新 SHA 指向包含新 bundle 的那个 commit |
+| **bundle 能通过官方校验器但 DSH 安装失败** | `source.path` 写的路径与 git tree 里的真实目录名不一致（常见：丢了 `dsh-fmcg-` 前缀） | 加完 bundle 目录后，先看一眼 `git ls-tree -d --name-only HEAD bundles/`，把 plugins.json 里的 path 逐个对齐 |
 
 ---
 
 ## 11. 当前 HEAD 摘要（方便 AI agent 校验）
 
-- HEAD: `015f7b92e381d705f5943f360b764426a17321ca`
-- 工作区：干净（只有 `.workbuddy/` 和 `docs/` 未跟踪，不影响）
-- 18 插件：npm 8 / git 10
-- 8 个 git 来源 bundle 在 `bundles/` 子目录，共用 commit `083d9234a1b8acb4099fd95d703735e2240ea110`（在 HEAD 的祖先链上）
+- HEAD: `69787a1af13458169610cce9dbffa97cb7246b34`
+- 工作区：干净
+- 22 插件：npm 12 / git 10
+- 8 个 git 来源 bundle 在 `bundles/dsh-fmcg-*/` 子目录，共用 commit `083d9234a1b8acb4099fd95d703735e2240ea110`（在 HEAD 的祖先链上）
 - 分类 15 / 标签 13 / 排序键 2
